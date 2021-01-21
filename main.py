@@ -8,7 +8,7 @@ def download_video(URL):
         'format': f'bestvideo+bestaudio',
         'outtmpl': DOWNLOAD_LOCATION + '/%(title)s.%(ext)s',
         'writesubtitles': True,
-        'subtitlesformat': 'srt'
+        'subtitlesformat': 'srv'
     }
     with youtube_dl.YoutubeDL(ydl_opts) as ydl:
         ydl.download([URL])
